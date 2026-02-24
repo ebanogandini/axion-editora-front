@@ -17,7 +17,7 @@ export const categories: Category[] = [
     { id: "c2", name: "Aventura", slug: "aventura" },
     { id: "c3", name: "Contos", slug: "contos" },
     { id: "c4", name: "Educativo", slug: "educativo" },
-    { id: "c5", name: "Poesia", slug: "poesia" },
+    { id: "c5", name: "Ficção Científica", slug: "ficcao-cientifica" },
 ];
 
 export const ageRanges: AgeRange[] = [
@@ -39,7 +39,7 @@ export const books: Book[] = [
         description:
             "Dino e Diene são dois dinossauros muito curiosos que adoram explorar. Durante uma tarde de descobertas na própria sala de aula, eles encontram um misterioso baú cheio de moedas douradas! Mas logo percebem que o maior tesouro não é apenas o que brilha, mas sim aprender o que fazer com ele. Embarque com essa duplinha em uma divertida aventura escolar e descubra as primeiras e mais importantes lições sobre como cuidar, poupar e valorizar o seu próprio tesouro!",
         coverImage: "/capas/livro1-Dino&Diene.png",
-        genre: "Educativo",
+        genre: "Ficção Científica",
         ageRange: "4–6 anos",
         rating: 4.9,
         isHighlight: true,
@@ -104,6 +104,24 @@ export const books: Book[] = [
         isbn: "978-65-89999-04-3",
         authorBio: "Arthur Henrique e Sullivan Soares elevam o nível da Coleção Educação Financeira neste volume. Arthur aplica sua experiência pedagógica para estruturar uma narrativa de transição (capítulos curtos), enquanto Sullivan traduz forças econômicas complexas — como inflação, gastos impulsivos e rendimentos — em aliados e antagonistas de um universo de fantasia, provando sua genialidade em simplificar as finanças.",
     },
+    {
+        id: "5",
+        title: "Finanças em Jogo",
+        author: "Arthur Henrique e Sullivan Soares",
+        description:
+            "O mundo dos esportes eletrônicos não perdoa erros, e o jovem protagonista de nossa história sabe bem disso. Focado em levar sua equipe de avatares cibernéticos ao topo do maior campeonato da cidade, ele logo descobre que não basta ter reflexos rápidos no controle: é preciso inteligência tática fora das telas. Para equipar seus personagens e gerenciar sua equipe sob os holofotes e o clamor da torcida, ele aprenderá sobre investimentos, gestão de recursos, patrocínios e os perigos do consumismo digital (como as famosas microtransações). Em 'Finanças em Jogo', dominar a economia é o melhor power-up para garantir a vitória na vida real!",
+        coverImage: "/capas/livro8-FinancasEmJogo.jpeg",
+        genre: "Educativo",
+        ageRange: "11–14 anos",
+        rating: 5.0,
+        isHighlight: true,
+        isNew: false,
+        tags: ["e-sports", "gestão de recursos", "games e economia"],
+        pages: 80,
+        publicationYear: "2025",
+        isbn: "978-65-89999-08-1",
+        authorBio: "Arthur Henrique e Sullivan Soares provam mais uma vez que entendem a mente dos jovens. Arthur utiliza sua vasta experiência para traduzir o ritmo frenético e a linguagem dos games para as páginas do livro, enquanto Sullivan mergulha na 'economia dos jogos', ensinando aos adolescentes como aplicar conceitos reais de planejamento e gestão de capital dentro e fora do ambiente virtual.",
+    },
 ];
 
 /** Subset of books flagged as highlights for the Home page */
@@ -118,7 +136,7 @@ export const newBooks: Book[] = books.filter((b) => b.isNew);
 
 export const releases: Release[] = [
     {
-        id: "5",
+        id: "6",
         title: "O Grande Projeto do 5º Ano",
         author: "Arthur Henrique e Sullivan Soares",
         description:
@@ -135,7 +153,7 @@ export const releases: Release[] = [
         authorBio: "Arthur Henrique e Sullivan Soares concluem a primeira fase da Coleção Educação Financeira com maestria. Nesta obra, a sensibilidade pedagógica de Arthur se une aos conhecimentos práticos de mercado de Sullivan para introduzir conceitos reais de planejamento de projetos e leitura de dados financeiros, capacitando as crianças a se tornarem os verdadeiros protagonistas de seus futuros.",
     },
     {
-        id: "6",
+        id: "7",
         title: "Os Heróis da Economia",
         author: "Arthur Henrique e Sullivan Soares",
         description:
@@ -152,7 +170,7 @@ export const releases: Release[] = [
         authorBio: "Arthur Henrique e Sullivan Soares iniciam a segunda etapa da sua aclamada coleção mergulhando no universo pré-adolescente. Arthur adapta sua metodologia pedagógica para a linguagem ágil e visual dos quadrinhos, enquanto Sullivan eleva o nível dos conceitos financeiros, introduzindo noções de macroeconomia, moedas digitais e proteção de patrimônio de uma forma que os jovens leitores jamais esquecerão.",
     },
     {
-        id: "7",
+        id: "8",
         title: "Operação Futuro",
         author: "Arthur Henrique e Sullivan Soares",
         description:
@@ -167,6 +185,23 @@ export const releases: Release[] = [
         publishedAt: "2026-12-20",
         isbn: "978-65-89999-07-4",
         authorBio: "Arthur Henrique e Sullivan Soares se consagram como mestres em dialogar com as diferentes fases da juventude. Nesta obra, a sensibilidade pedagógica de Arthur guia uma narrativa densa e questionadora, enquanto Sullivan transporta a economia para o futuro, discutindo tendências tecnológicas, sustentabilidade financeira e o impacto de nossas escolhas a longo prazo no mundo ao nosso redor.",
+    },
+    {
+        id: "9",
+        title: "Jornada 9.0: O Aplicativo de Gastos",
+        author: "Arthur Henrique e Sullivan Soares",
+        description:
+            "O último ano do Ensino Fundamental 2 chegou, e com ele, a necessidade de planejar a tão sonhada formatura! Percebendo que a turma está com dificuldades para juntar dinheiro, três alunos brilhantes decidem programar a 'Jornada 9.0', um aplicativo de gastos feito sob medida para estudantes. Mas quando o app viraliza nos corredores da escola e até na cidade, eles descobrem que lidar com o dinheiro real exige muito mais do que apenas escrever linhas de código. Eles precisarão de disciplina, segurança digital e inteligência financeira para transformar o mundo virtual em conquistas no mundo real.",
+        coverImage: "/capas/livro9-Jornada.jpeg",
+        genre: "Educativo",
+        ageRange: "11–14 anos",
+        rating: 5.0,
+        isNew: true,
+        tags: ["tecnologia", "gestão financeira", "aplicativo"],
+        pages: 88,
+        publishedAt: "2027-01-05",
+        isbn: "978-65-89999-09-8",
+        authorBio: "Arthur Henrique e Sullivan Soares encerram a Coleção Educação Financeira mostrando que estão perfeitamente sintonizados com o século XXI. Arthur constrói uma narrativa envolvente sobre os dilemas do fim do ensino fundamental, enquanto Sullivan desmistifica ferramentas financeiras modernas, ensinando aos jovens como a tecnologia pode ser a maior aliada na hora de construir um futuro próspero.",
     },
 ];
 
