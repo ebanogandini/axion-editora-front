@@ -43,66 +43,74 @@ export default function SobrePage() {
             </section>
 
             {/* ── Main Content ──────────────────────────────────────────── */}
-            <section className="flex-1 py-16 bg-brand-bg">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="flex-1 py-20 bg-brand-bg">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    {/* Hero card — brand logo */}
-                    <div className="relative aspect-[21/9] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-brand-blue/10 via-brand-purple/10 to-brand-orange/5 mb-14 flex items-center justify-center">
-                        {/* Decorative rings */}
-                        <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                            <div className="w-96 h-96 rounded-full border-[40px] border-brand-purple" />
-                        </div>
-                        <div className="absolute top-4 right-8 w-20 h-20 rounded-full bg-brand-orange/10 blur-xl" />
-                        <div className="absolute bottom-4 left-8 w-32 h-32 rounded-full bg-brand-blue/10 blur-xl" />
+                    {/* ── EDITORIAL SPLIT: Logo ↔ Story ─────────────────── */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-20">
 
-                        <div className="relative z-10 flex flex-col items-center justify-center text-center p-6 sm:p-10 w-full">
-                            <Image
-                                src="/logo.jpeg"
-                                alt="Axion Editora"
-                                width={600}
-                                height={600}
-                                className="w-48 sm:w-64 md:w-[450px] lg:w-[550px] h-auto object-contain mx-auto mb-8 mix-blend-multiply"
-                                priority
-                            />
-                            <p className="text-sm text-brand-purple/60 font-medium">
-                                Fundada em 2019 · São Paulo, Brasil
-                            </p>
+                        {/* ── Left: Logo in open air ───────────────────────── */}
+                        <div className="relative flex items-center justify-center py-8 lg:py-0">
+                            {/* Ambient glow — absolute, pointer-safe */}
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div className="w-72 h-72 rounded-full bg-brand-purple/20 blur-[100px]" />
+                            </div>
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div className="w-48 h-48 rounded-full bg-brand-orange/10 blur-[80px] translate-x-12 translate-y-8" />
+                            </div>
+
+                            {/* Logo — free-floating, no restricting box */}
+                            <div className="relative z-10 flex flex-col items-center gap-6 text-center">
+                                <Image
+                                    src="/logo.jpeg"
+                                    alt="Axion Editora"
+                                    width={600}
+                                    height={600}
+                                    className="w-64 sm:w-80 md:w-96 lg:w-full max-w-[420px] h-auto object-contain mix-blend-multiply drop-shadow-xl"
+                                    priority
+                                />
+                                <div className="flex items-center gap-3 text-xs font-semibold text-brand-purple/50 uppercase tracking-widest">
+                                    <span className="block h-px w-8 bg-brand-purple/20" />
+                                    Fundada em 2019 · São Paulo
+                                    <span className="block h-px w-8 bg-brand-purple/20" />
+                                </div>
+                            </div>
                         </div>
+
+                        {/* ── Right: Story text ────────────────────────────── */}
+                        <article className="flex flex-col justify-center">
+                            <span className="inline-block text-brand-orange text-xs font-bold uppercase tracking-widest mb-3">
+                                Nossa trajetória
+                            </span>
+                            <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-blue mb-6 leading-tight">
+                                Quem Somos
+                            </h2>
+                            <div className="space-y-5 text-gray-600 leading-relaxed text-base">
+                                <p>
+                                    Fundada em 2019, a{" "}
+                                    <strong className="text-brand-blue">Axion Editora</strong>{" "}
+                                    nasceu do sonho de criar histórias que tocam o coração de
+                                    crianças e jovens brasileiros. O que começou como um pequeno
+                                    projeto editorial em São Paulo rapidamente cresceu para se
+                                    tornar uma das referências em literatura infantojuvenil no
+                                    Brasil.
+                                </p>
+                                <p>
+                                    Com mais de{" "}
+                                    <strong className="text-brand-blue">100 títulos publicados</strong>{" "}
+                                    e uma rede de autores e ilustradores espalhados por todo o
+                                    país, cultivamos histórias que refletem a riqueza cultural
+                                    brasileira — suas festas, paisagens, sotaques e personagens.
+                                </p>
+                                <p>
+                                    Nosso time é formado por autores, ilustradores e educadores
+                                    apaixonados que acreditam no poder transformador da leitura.
+                                    Cada livro é cuidadosamente pensado para estimular a
+                                    imaginação, a empatia e o amor pelo conhecimento.
+                                </p>
+                            </div>
+                        </article>
                     </div>
-
-                    {/* Nossa História */}
-                    <article className="prose-article mb-14">
-                        <span className="inline-block text-brand-orange text-xs font-bold uppercase tracking-widest mb-2">
-                            Nossa trajetória
-                        </span>
-                        <h2 className="font-display text-3xl font-bold text-brand-blue mb-5 leading-tight">
-                            Quem Somos
-                        </h2>
-                        <div className="space-y-4 text-gray-700 leading-relaxed text-base">
-                            <p>
-                                Fundada em 2019, a{" "}
-                                <strong className="text-brand-blue">Axion Editora</strong>{" "}
-                                nasceu do sonho de criar histórias que tocam o coração de
-                                crianças e jovens brasileiros. O que começou como um pequeno
-                                projeto editorial em São Paulo rapidamente cresceu para se
-                                tornar uma das referências em literatura infantojuvenil no
-                                Brasil.
-                            </p>
-                            <p>
-                                Com mais de{" "}
-                                <strong className="text-brand-blue">100 títulos publicados</strong>{" "}
-                                e uma rede de autores e ilustradores espalhados por todo o
-                                país, cultivamos histórias que refletem a riqueza cultural
-                                brasileira — suas festas, paisagens, sotaques e personagens.
-                            </p>
-                            <p>
-                                Nosso time é formado por autores, ilustradores e educadores
-                                apaixonados que acreditam no poder transformador da leitura.
-                                Cada livro é cuidadosamente pensado para estimular a
-                                imaginação, a empatia e o amor pelo conhecimento.
-                            </p>
-                        </div>
-                    </article>
 
                     {/* Pull Quote — redesigned magical card */}
                     <figure className="relative my-14 rounded-3xl overflow-hidden p-10 md:p-16 bg-gradient-to-br from-brand-blue via-brand-purple to-brand-orange/90 shadow-2xl shadow-brand-purple/30">
