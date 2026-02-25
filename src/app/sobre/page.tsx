@@ -231,7 +231,7 @@ export default function SobrePage() {
                     {/* Map iframe */}
                     <div className="w-full aspect-video md:aspect-[21/9] rounded-2xl overflow-hidden shadow-md border border-slate-100 relative">
                         <iframe
-                            src="https://maps.google.com/maps?q=Rua%20Domingos%20de%20Morais,%202132,%20Vila%20Mariana,%20Sao%20Paulo&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            src="https://maps.google.com/maps?q=Av.+S%C3%A3o+Camilo,+1814+-+Granja+Viana,+Carapicu%C3%ADba+-+SP,+06345-290&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             title="Localização da Axion Editora no Google Maps"
                             className="w-full h-full absolute inset-0 border-0"
                             loading="lazy"
@@ -246,10 +246,10 @@ export default function SobrePage() {
                         </div>
                         <div>
                             <p className="font-bold text-brand-blue text-base leading-snug">
-                                Rua Domingos de Morais, nº 2.132, Sala 42
+                                Avenida São Camilo, n° 1814, Sala 13 Conjunto 02
                             </p>
                             <p className="text-sm text-slate-500 mt-0.5">
-                                Vila Mariana, São Paulo – SP · CEP: 04036-000
+                                Vilarejo, Carapicuíba – SP · CEP: 06345-290
                             </p>
                         </div>
                     </div>

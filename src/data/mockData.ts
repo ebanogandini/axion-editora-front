@@ -262,5 +262,5 @@ export const aboutValues: AboutValue[] = [
 export const contactInfo: ContactInfo = {
     email: "contato@axioneditora.com.br",
     phone: "(11) 97491-1974",
-    address: "Rua Domingos de Morais, nº 2.132, Sala 42 - Vila Mariana, São Paulo",
+    address: "Avenida São Camilo, n° 1814, Sala 13 Conjunto 02 - Vilarejo, Carapicuíba - SP",
 };
