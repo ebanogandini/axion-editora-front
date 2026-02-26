@@ -47,7 +47,7 @@ export default function BookCard(props: BookCardProps) {
                 ) : (
                     /* Large number placeholder */
                     <span
-                        className="select-none font-display font-bold text-brand-purple/20 leading-none"
+                        className="select-none font-display font-bold text-brand-gold/20 leading-none"
                         style={{ fontSize: "clamp(4rem, 8vw, 6rem)" }}
                         aria-hidden="true"
                     >
@@ -62,7 +62,7 @@ export default function BookCard(props: BookCardProps) {
                             Novidade
                         </Badge>
                     )}
-                    <Badge className="text-[10px] font-semibold bg-white/80 text-brand-purple border-0 shadow-sm backdrop-blur-sm">
+                    <Badge className="text-[10px] font-semibold bg-white/80 text-brand-gold-dark border-0 shadow-sm backdrop-blur-sm">
                         {badgeLabel}
                     </Badge>
                 </div>
@@ -70,15 +70,15 @@ export default function BookCard(props: BookCardProps) {
 
             {/* Content — below the fold, clean and minimal */}
             <div className="flex flex-col gap-1.5 px-3 py-3 flex-1">
-                <h3 className="font-display font-semibold text-brand-dark text-sm leading-snug line-clamp-2 group-hover:text-brand-purple transition-colors duration-200">
+                <h3 className="font-display font-semibold text-brand-dark text-sm leading-snug line-clamp-2 group-hover:text-brand-gold-dark transition-colors duration-200">
                     {item.title}
                 </h3>
-                <p className="text-xs text-brand-purple/70 font-medium">{item.author}</p>
+                <p className="text-xs text-brand-gold-dark/70 font-medium">{item.author}</p>
 
                 {/* Rating row */}
                 <div className="flex items-center justify-between mt-auto pt-1">
                     <div className="flex items-center gap-1">
-                        <Star size={11} className="text-brand-orange fill-brand-orange" />
+                        <Star size={11} className="text-sky-400 fill-sky-400" />
                         <span className="text-xs font-semibold text-slate-600">
                             {item.rating.toFixed(1)}
                         </span>
@@ -87,7 +87,7 @@ export default function BookCard(props: BookCardProps) {
                         asChild
                         variant="ghost"
                         size="sm"
-                        className="h-6 px-2 text-[10px] text-brand-purple hover:bg-brand-purple/10 font-semibold"
+                        className="h-6 px-2 text-[10px] text-brand-gold-dark hover:bg-brand-gold/10 font-semibold"
                     >
                         <Link href={`/livro/${item.id}`}>Ver mais</Link>
                     </Button>

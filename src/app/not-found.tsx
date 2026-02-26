@@ -7,25 +7,25 @@ export default function NotFound() {
         <section className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 bg-brand-bg">
             {/* Decorative blobs */}
             <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10">
-                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-brand-purple/5 blur-3xl" />
-                <div className="absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full bg-brand-orange/5 blur-3xl" />
+                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-brand-gold/5 blur-3xl" />
+                <div className="absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full bg-sky-200/5 blur-3xl" />
             </div>
 
             {/* Icon */}
             <div className="relative mb-8">
                 {/* Soft glow ring behind the icon */}
-                <div className="absolute inset-0 rounded-full bg-brand-purple/10 scale-150 blur-2xl" />
+                <div className="absolute inset-0 rounded-full bg-brand-gold/10 scale-150 blur-2xl" />
                 <div className="relative p-8 rounded-full bg-white shadow-lg">
                     <BookX
                         size={80}
-                        className="text-brand-purple/50"
+                        className="text-brand-gold/50"
                         strokeWidth={1.2}
                     />
                 </div>
             </div>
 
             {/* 404 label */}
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand-orange mb-4">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-sky-500 mb-4">
                 Erro 404 · Página não encontrada
             </p>
 
@@ -45,7 +45,7 @@ export default function NotFound() {
                 <Button
                     asChild
                     size="lg"
-                    className="bg-brand-orange hover:bg-brand-orange/90 text-white font-bold px-8 rounded-xl shadow-md hover:shadow-brand-orange/30 transition-all duration-200 group"
+                    className="bg-sky-500 hover:bg-sky-600 text-white font-bold px-8 rounded-xl shadow-md hover:shadow-sky-400/30 transition-all duration-200 group"
                 >
                     <Link href="/" className="flex items-center gap-2">
                         <ArrowLeft

@@ -74,9 +74,9 @@ export default function ContatoPage() {
 
                 {/* ── Layer 1: Volumetric light orbs ── */}
                 {/* Orange hotspot — top-left */}
-                <div className="pointer-events-none absolute -top-32 -left-32 size-[500px] rounded-full bg-brand-orange/30 blur-[120px]" />
+                <div className="pointer-events-none absolute -top-32 -left-32 size-[500px] rounded-full bg-sky-300/20 blur-[120px]" />
                 {/* Purple hotspot — bottom-right */}
-                <div className="pointer-events-none absolute -bottom-32 -right-16 size-[480px] rounded-full bg-brand-purple/40 blur-[120px]" />
+                <div className="pointer-events-none absolute -bottom-32 -right-16 size-[480px] rounded-full bg-brand-gold/40 blur-[120px]" />
                 {/* Cool white fill — top-right */}
                 <div className="pointer-events-none absolute -top-20 right-0 size-72 rounded-full bg-white/8 blur-[80px]" />
 
@@ -88,7 +88,7 @@ export default function ContatoPage() {
                 />
                 <Sparkles
                     size={36}
-                    className="pointer-events-none absolute top-16 right-[12%] rotate-12 text-brand-orange opacity-30 animate-pulse"
+                    className="pointer-events-none absolute top-16 right-[12%] rotate-12 text-sky-300 opacity-30 animate-pulse"
                 />
                 <Star
                     size={28}
@@ -104,7 +104,7 @@ export default function ContatoPage() {
                 <Star
                     size={16}
                     strokeWidth={1}
-                    className="pointer-events-none absolute top-1/2 left-[5%] text-brand-orange opacity-40"
+                    className="pointer-events-none absolute top-1/2 left-[5%] text-sky-300 opacity-40"
                     fill="currentColor"
                 />
 
@@ -114,12 +114,12 @@ export default function ContatoPage() {
 
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/25 text-white text-sm font-medium mb-8">
-                            <Sparkles size={15} className="text-brand-orange" />
+                            <Sparkles size={15} className="text-sky-300" />
                             Atendimento Personalizado
                         </div>
 
                         {/* Main title */}
-                        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand-gold-dark leading-tight mb-6 drop-shadow-lg">
                             Fale Conosco
                         </h1>
 
@@ -141,10 +141,10 @@ export default function ContatoPage() {
                         {/* ── Left: Contact Info (2 cols) ───────────────────── */}
                         <aside className="lg:col-span-2 flex flex-col gap-8">
                             <div>
-                                <span className="inline-block text-brand-orange text-xs font-bold uppercase tracking-widest mb-2">
+                                <span className="inline-block text-sky-500 text-xs font-bold uppercase tracking-widest mb-2">
                                     Informações
                                 </span>
-                                <h2 className="font-display text-2xl font-bold text-brand-blue mb-1 leading-tight">
+                                <h2 className="font-display text-2xl font-bold text-brand-gold-dark mb-1 leading-tight">
                                     Nosso Contato
                                 </h2>
                                 <p className="text-gray-500 text-sm leading-relaxed">
@@ -156,10 +156,10 @@ export default function ContatoPage() {
                             <ul className="flex flex-col gap-5">
                                 {/* Email */}
                                 <li className="flex items-start gap-4 group">
-                                    <div className="p-3 rounded-xl bg-brand-blue/10 group-hover:bg-brand-blue transition-colors duration-300 shrink-0">
+                                    <div className="p-3 rounded-xl bg-brand-gold/10 group-hover:bg-brand-gold transition-colors duration-300 shrink-0">
                                         <Mail
                                             size={18}
-                                            className="text-brand-blue group-hover:text-white transition-colors duration-300"
+                                            className="text-brand-gold-dark group-hover:text-white transition-colors duration-300"
                                         />
                                     </div>
                                     <div>
@@ -168,7 +168,7 @@ export default function ContatoPage() {
                                         </p>
                                         <a
                                             href={`mailto:${contactInfo.email}`}
-                                            className="text-sm font-medium text-brand-blue hover:text-brand-orange transition-colors duration-200 break-all"
+                                            className="text-sm font-medium text-brand-gold-dark hover:text-sky-500 transition-colors duration-200 break-all"
                                         >
                                             {contactInfo.email}
                                         </a>
@@ -177,10 +177,10 @@ export default function ContatoPage() {
 
                                 {/* Phone */}
                                 <li className="flex items-start gap-4 group">
-                                    <div className="p-3 rounded-xl bg-brand-purple/10 group-hover:bg-brand-purple transition-colors duration-300 shrink-0">
+                                    <div className="p-3 rounded-xl bg-brand-gold/10 group-hover:bg-brand-gold transition-colors duration-300 shrink-0">
                                         <Phone
                                             size={18}
-                                            className="text-brand-purple group-hover:text-white transition-colors duration-300"
+                                            className="text-brand-gold-dark group-hover:text-white transition-colors duration-300"
                                         />
                                     </div>
                                     <div>
@@ -189,7 +189,7 @@ export default function ContatoPage() {
                                         </p>
                                         <a
                                             href={`tel:${contactInfo.phone.replace(/\D/g, "")}`}
-                                            className="text-sm font-medium text-brand-blue hover:text-brand-orange transition-colors duration-200"
+                                            className="text-sm font-medium text-brand-gold-dark hover:text-sky-500 transition-colors duration-200"
                                         >
                                             {contactInfo.phone}
                                         </a>
@@ -198,17 +198,17 @@ export default function ContatoPage() {
 
                                 {/* Address */}
                                 <li className="flex items-start gap-4 group">
-                                    <div className="p-3 rounded-xl bg-brand-orange/10 group-hover:bg-brand-orange transition-colors duration-300 shrink-0">
+                                    <div className="p-3 rounded-xl bg-sky-100 group-hover:bg-sky-500 transition-colors duration-300 shrink-0">
                                         <MapPin
                                             size={18}
-                                            className="text-brand-orange group-hover:text-white transition-colors duration-300"
+                                            className="text-sky-600 group-hover:text-white transition-colors duration-300"
                                         />
                                     </div>
                                     <div>
                                         <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-0.5">
                                             Endereço
                                         </p>
-                                        <p className="text-sm font-medium text-brand-blue leading-snug">
+                                        <p className="text-sm font-medium text-brand-gold-dark leading-snug">
                                             {contactInfo.address}
                                         </p>
                                     </div>
@@ -216,11 +216,11 @@ export default function ContatoPage() {
                             </ul>
 
                             {/* Decorative card */}
-                            <div className="mt-2 p-6 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-purple text-white">
+                            <div className="mt-2 p-6 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-gold-dark text-white">
                                 <p className="font-display text-lg font-bold mb-2">
                                     Quer publicar conosco?
                                 </p>
-                                <p className="text-blue-200 text-sm leading-relaxed">
+                                <p className="text-white/70 text-sm leading-relaxed">
                                     Aceitamos manuscritos de autores brasileiros. Envie seu texto
                                     pelo formulário ao lado com o assunto "Manuscrito".
                                 </p>
@@ -241,7 +241,7 @@ export default function ContatoPage() {
                                             />
                                         </div>
                                         <div>
-                                            <h3 className="font-display text-2xl font-bold text-brand-blue mb-2">
+                                            <h3 className="font-display text-2xl font-bold text-brand-gold-dark mb-2">
                                                 Mensagem enviada!
                                             </h3>
                                             <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
@@ -251,7 +251,7 @@ export default function ContatoPage() {
                                         </div>
                                         <button
                                             onClick={handleReset}
-                                            className="mt-2 px-6 py-2.5 rounded-xl border border-brand-blue/30 text-brand-blue text-sm font-semibold hover:bg-brand-blue hover:text-white transition-all duration-200"
+                                            className="mt-2 px-6 py-2.5 rounded-xl border border-brand-gold/30 text-brand-gold-dark text-sm font-semibold hover:bg-brand-gold hover:text-white transition-all duration-200"
                                         >
                                             Enviar outra mensagem
                                         </button>
@@ -260,7 +260,7 @@ export default function ContatoPage() {
                                     /* ── Contact Form ──────────────────────────── */
                                     <form noValidate className="flex flex-col gap-5 flex-1">
                                         <div>
-                                            <h2 className="font-display text-xl font-bold text-brand-blue mb-1">
+                                            <h2 className="font-display text-xl font-bold text-brand-gold-dark mb-1">
                                                 Como podemos te ajudar?
                                             </h2>
                                             <p className="text-gray-400 text-xs">

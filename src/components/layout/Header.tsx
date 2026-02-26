@@ -27,7 +27,7 @@ export default function Header() {
                         className="font-display text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
                     >
                         <span className="text-brand-blue">Axion</span>
-                        <span className="text-brand-purple"> Editora</span>
+                        <span className="text-brand-gold-dark"> Editora</span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -42,8 +42,8 @@ export default function Header() {
                                     className={`
                     text-sm font-medium transition-colors duration-200 relative group
                     ${isActive
-                                            ? "text-brand-purple"
-                                            : "text-slate-500 hover:text-brand-purple"
+                                            ? "text-brand-gold-dark"
+                                            : "text-slate-500 hover:text-brand-gold-dark"
                                         }
                   `}
                                 >
@@ -51,7 +51,7 @@ export default function Header() {
                                     {/* Animated underline */}
                                     <span
                                         className={`
-                      absolute -bottom-[22px] left-0 h-0.5 bg-brand-purple rounded-full transition-all duration-200
+                      absolute -bottom-[22px] left-0 h-0.5 bg-brand-gold rounded-full transition-all duration-200
                       ${isActive ? "w-full" : "w-0 group-hover:w-full"}
                     `}
                                     />
@@ -64,7 +64,7 @@ export default function Header() {
                     <div className="flex items-center gap-3">
                         <button
                             aria-label="Buscar"
-                            className="hidden md:flex p-2 rounded-lg text-slate-400 hover:text-brand-purple hover:bg-brand-purple/5 transition-all duration-200"
+                            className="hidden md:flex p-2 rounded-lg text-slate-400 hover:text-brand-gold-dark hover:bg-brand-gold/10 transition-all duration-200"
                         >
                             <Search size={18} />
                         </button>

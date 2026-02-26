@@ -17,13 +17,13 @@ export default function LancamentosPage() {
     return (
         <div className="flex flex-col">
             {/* ── Page Header ───────────────────────────────────────────── */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-brand-purple via-brand-purple to-brand-blue py-16">
+            <section className="relative overflow-hidden bg-gradient-to-br from-brand-blue via-brand-gold-dark to-brand-blue py-16">
                 {/* Background blobs */}
                 <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-brand-blue/20 blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-brand-orange/10 blur-2xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-sky-200/20 blur-2xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-orange/20 border border-brand-orange/30 text-brand-orange text-sm font-semibold mb-5">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-300/20 border border-sky-300/40 text-sky-200 text-sm font-semibold mb-5">
                         <Sparkles size={13} />
                         Chegando às livrarias
                     </div>
@@ -41,14 +41,14 @@ export default function LancamentosPage() {
             <section className="bg-white border-b border-slate-100 py-5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center gap-3 text-sm text-slate-500">
-                        <CalendarDays size={16} className="text-brand-purple" />
+                        <CalendarDays size={16} className="text-brand-gold-dark" />
                         <span>
-                            <span className="font-semibold text-brand-purple">
+                            <span className="font-semibold text-brand-gold-dark">
                                 {releases.length}
                             </span>{" "}
                             novos títulos disponíveis
                         </span>
-                        <span className="ml-auto hidden sm:inline-flex items-center gap-1.5 text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-pointer group">
+                        <span className="ml-auto hidden sm:inline-flex items-center gap-1.5 text-brand-gold-dark font-semibold hover:text-brand-gold transition-colors cursor-pointer group">
                             <Link href="/catalogo" className="flex items-center gap-1.5">
                                 Ver catálogo completo
                                 <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
@@ -67,7 +67,7 @@ export default function LancamentosPage() {
                                 <BookCard variant="release" item={release} />
                                 {/* Publication date below card */}
                                 <div className="flex items-center gap-1.5 px-1 text-xs text-slate-400">
-                                    <CalendarDays size={11} className="text-brand-purple/60" />
+                                    <CalendarDays size={11} className="text-brand-gold-dark/60" />
                                     {formatDatePtBR(release.publishedAt)}
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ export default function LancamentosPage() {
             {/* ── Bottom CTA ────────────────────────────────────────────── */}
             <section className="py-14 bg-white border-t border-slate-100">
                 <div className="max-w-2xl mx-auto px-4 text-center">
-                    <h2 className="font-display text-2xl font-bold text-brand-blue mb-3">
+                    <h2 className="font-display text-2xl font-bold text-brand-gold-dark mb-3">
                         Não perca nenhum lançamento
                     </h2>
                     <p className="text-gray-500 text-sm mb-7 leading-relaxed">
@@ -89,14 +89,14 @@ export default function LancamentosPage() {
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Link
                             href="/contato"
-                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-brand-orange text-white text-sm font-semibold hover:bg-brand-orange/90 transition-colors shadow-md hover:shadow-brand-orange/30"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-brand-gold text-brand-dark text-sm font-semibold hover:bg-brand-gold-dark hover:text-white transition-colors shadow-md hover:shadow-brand-gold/30"
                         >
                             Falar com a editora
                             <ArrowRight size={14} />
                         </Link>
                         <Link
                             href="/catalogo"
-                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl border border-brand-blue/30 text-brand-blue text-sm font-semibold hover:bg-brand-blue hover:text-white transition-all"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl border border-brand-gold/40 text-brand-gold-dark text-sm font-semibold hover:bg-brand-gold-dark hover:text-white transition-all"
                         >
                             Ver catálogo completo
                         </Link>

@@ -16,13 +16,13 @@ const VALUE_CONFIG: Record<
     },
     award: {
         icon: <Award size={22} strokeWidth={1.6} />,
-        bg: "bg-brand-purple/10",
-        color: "text-brand-purple",
+        bg: "bg-brand-gold/10",
+        color: "text-brand-gold-dark",
     },
     users: {
         icon: <Heart size={22} strokeWidth={1.6} />,
-        bg: "bg-brand-orange/10",
-        color: "text-brand-orange",
+        bg: "bg-sky-100",
+        color: "text-sky-600",
     },
 };
 
@@ -30,7 +30,7 @@ export default function SobrePage() {
     return (
         <div className="flex flex-col">
             {/* ── Page Header ───────────────────────────────────────────── */}
-            <section className="bg-gradient-to-br from-brand-blue to-brand-purple py-16">
+            <section className="bg-gradient-to-br from-brand-blue to-brand-gold-dark py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
                         Sobre a Axion Editora
@@ -53,10 +53,10 @@ export default function SobrePage() {
                         <div className="relative flex items-center justify-center py-8 lg:py-0">
                             {/* Ambient glow — absolute, pointer-safe */}
                             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div className="w-72 h-72 rounded-full bg-brand-purple/20 blur-[100px]" />
+                                <div className="w-72 h-72 rounded-full bg-brand-gold/20 blur-[100px]" />
                             </div>
                             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div className="w-48 h-48 rounded-full bg-brand-orange/10 blur-[80px] translate-x-12 translate-y-8" />
+                                <div className="w-48 h-48 rounded-full bg-sky-200/10 blur-[80px] translate-x-12 translate-y-8" />
                             </div>
 
                             {/* Logo — free-floating, no restricting box */}
@@ -69,26 +69,26 @@ export default function SobrePage() {
                                     className="w-64 sm:w-80 md:w-96 lg:w-full max-w-[420px] h-auto object-contain mix-blend-multiply drop-shadow-xl"
                                     priority
                                 />
-                                <div className="flex items-center gap-3 text-xs font-semibold text-brand-purple/50 uppercase tracking-widest">
-                                    <span className="block h-px w-8 bg-brand-purple/20" />
+                                <div className="flex items-center gap-3 text-xs font-semibold text-brand-gold-dark/50 uppercase tracking-widest">
+                                    <span className="block h-px w-8 bg-brand-gold/30" />
                                     Fundada em 2019 · São Paulo
-                                    <span className="block h-px w-8 bg-brand-purple/20" />
+                                    <span className="block h-px w-8 bg-brand-gold/30" />
                                 </div>
                             </div>
                         </div>
 
                         {/* ── Right: Story text ────────────────────────────── */}
                         <article className="flex flex-col justify-center">
-                            <span className="inline-block text-brand-orange text-xs font-bold uppercase tracking-widest mb-3">
+                            <span className="inline-block text-sky-500 text-xs font-bold uppercase tracking-widest mb-3">
                                 Nossa trajetória
                             </span>
-                            <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-blue mb-6 leading-tight">
+                            <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-gold-dark mb-6 leading-tight">
                                 Quem Somos
                             </h2>
                             <div className="space-y-5 text-gray-600 leading-relaxed text-base">
                                 <p>
                                     Fundada em 2019, a{" "}
-                                    <strong className="text-brand-blue">Axion Editora</strong>{" "}
+                                    <strong className="text-brand-gold-dark">Axion Editora</strong>{" "}
                                     nasceu do sonho de criar histórias que tocam o coração de
                                     crianças e jovens brasileiros. O que começou como um pequeno
                                     projeto editorial em São Paulo rapidamente cresceu para se
@@ -97,7 +97,7 @@ export default function SobrePage() {
                                 </p>
                                 <p>
                                     Com mais de{" "}
-                                    <strong className="text-brand-blue">100 títulos publicados</strong>{" "}
+                                    <strong className="text-brand-gold-dark">100 títulos publicados</strong>{" "}
                                     e uma rede de autores e ilustradores espalhados por todo o
                                     país, cultivamos histórias que refletem a riqueza cultural
                                     brasileira — suas festas, paisagens, sotaques e personagens.
@@ -113,7 +113,7 @@ export default function SobrePage() {
                     </div>
 
                     {/* Pull Quote — redesigned magical card */}
-                    <figure className="relative my-14 rounded-3xl overflow-hidden p-10 md:p-16 bg-gradient-to-br from-brand-blue via-brand-purple to-brand-orange/90 shadow-2xl shadow-brand-purple/30">
+                    <figure className="relative my-14 rounded-3xl overflow-hidden p-10 md:p-16 bg-gradient-to-br from-brand-blue via-brand-gold-dark to-sky-400/80 shadow-2xl shadow-brand-gold/30">
 
                         {/* Giant background Quote icon */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
@@ -122,7 +122,7 @@ export default function SobrePage() {
 
                         {/* Corner Sparkles */}
                         <Sparkles size={20} className="absolute top-6 left-8 text-white/40" />
-                        <Star size={14} className="absolute top-8 right-10 text-brand-orange/70" fill="currentColor" />
+                        <Star size={14} className="absolute top-8 right-10 text-sky-300/70" fill="currentColor" />
                         <Sparkles size={16} className="absolute bottom-8 right-12 text-white/30" />
                         <Star size={18} className="absolute bottom-6 left-10 text-white/20" fill="currentColor" />
 
@@ -137,10 +137,10 @@ export default function SobrePage() {
 
                     {/* Nossa Missão */}
                     <article className="mb-14">
-                        <span className="inline-block text-brand-orange text-xs font-bold uppercase tracking-widest mb-2">
+                        <span className="inline-block text-sky-500 text-xs font-bold uppercase tracking-widest mb-2">
                             O que nos move
                         </span>
-                        <h2 className="font-display text-3xl font-bold text-brand-blue mb-5 leading-tight">
+                        <h2 className="font-display text-3xl font-bold text-brand-gold-dark mb-5 leading-tight">
                             Nossa Missão
                         </h2>
                         <div className="space-y-4 text-gray-700 leading-relaxed text-base">
@@ -169,10 +169,10 @@ export default function SobrePage() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         {[
-                            { value: "100+", label: "Títulos publicados", color: "text-brand-blue" },
-                            { value: "1M+", label: "Leitores felizes", color: "text-brand-purple" },
-                            { value: "50+", label: "Autores parceiros", color: "text-brand-orange" },
-                            { value: "10+", label: "Prêmios literários", color: "text-brand-blue" },
+                            { value: "100+", label: "Títulos publicados", color: "text-brand-gold-dark" },
+                            { value: "1M+", label: "Leitores felizes", color: "text-sky-500" },
+                            { value: "50+", label: "Autores parceiros", color: "text-sky-500" },
+                            { value: "10+", label: "Prêmios literários", color: "text-brand-gold-dark" },
                         ].map(({ value, label, color }) => (
                             <div key={label}>
                                 <p className={`font-display font-bold text-4xl sm:text-5xl ${color} leading-none`}>
@@ -188,7 +188,7 @@ export default function SobrePage() {
             {/* ── Nossos Valores ─────────────────────────────────────────── */}
             <section className="bg-slate-50 py-20">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="font-display font-bold text-3xl text-brand-blue text-center mb-12">
+                    <h2 className="font-display font-bold text-3xl text-brand-gold-dark text-center mb-12">
                         Nossos Valores
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -203,7 +203,7 @@ export default function SobrePage() {
                                     <div className={`size-12 rounded-full flex items-center justify-center mb-6 ${cfg.bg} ${cfg.color}`}>
                                         {cfg.icon}
                                     </div>
-                                    <h3 className="font-bold text-brand-blue text-xl mb-3">
+                                    <h3 className="font-bold text-brand-gold-dark text-xl mb-3">
                                         {value.title}
                                     </h3>
                                     <p className="text-slate-500 leading-relaxed text-sm">
@@ -221,7 +221,7 @@ export default function SobrePage() {
             <section className="bg-white py-16 border-t border-slate-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Heading */}
-                    <h2 className="font-display font-bold text-3xl text-brand-blue text-center mb-4">
+                    <h2 className="font-display font-bold text-3xl text-brand-gold-dark text-center mb-4">
                         Onde Estamos
                     </h2>
                     <p className="text-slate-500 text-center mb-10 text-sm">
@@ -241,7 +241,7 @@ export default function SobrePage() {
 
                     {/* Address card */}
                     <div className="mt-6 flex items-start gap-3 bg-slate-50 rounded-2xl border border-slate-100 px-6 py-5 shadow-sm">
-                        <div className="size-10 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="size-10 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 mt-0.5">
                             <MapPin size={18} strokeWidth={1.8} />
                         </div>
                         <div>
@@ -265,13 +265,13 @@ export default function SobrePage() {
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Link
                             href="/catalogo"
-                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-brand-orange text-white text-sm font-semibold hover:bg-brand-orange/90 transition-colors shadow-md"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-brand-gold text-brand-dark text-sm font-semibold hover:bg-brand-gold-dark hover:text-white transition-colors shadow-md hover:shadow-brand-gold/30"
                         >
                             Explorar Catálogo
                         </Link>
                         <Link
                             href="/contato"
-                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl border border-brand-blue/30 text-brand-blue text-sm font-semibold hover:bg-brand-blue hover:text-white transition-all"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl border border-brand-gold-dark/30 text-brand-gold-dark text-sm font-semibold hover:bg-brand-gold-dark hover:text-white transition-all"
                         >
                             Entrar em Contato
                         </Link>

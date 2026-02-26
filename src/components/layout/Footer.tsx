@@ -14,7 +14,7 @@ export default function Footer() {
                             className="font-display text-xl font-bold tracking-tight hover:opacity-80 transition-opacity w-fit"
                         >
                             <span className="text-brand-blue">Axion</span>
-                            <span className="text-brand-purple"> Editora</span>
+                            <span className="text-brand-gold-dark"> Editora</span>
                         </Link>
                         <p className="text-slate-400 text-sm leading-relaxed max-w-[200px]">
                             Histórias que encantam gerações.
@@ -35,7 +35,7 @@ export default function Footer() {
                                 <li key={href}>
                                     <Link
                                         href={href}
-                                        className="text-sm text-slate-500 hover:text-brand-purple transition-colors duration-150"
+                                        className="text-sm text-slate-500 hover:text-brand-gold-dark transition-colors duration-150"
                                     >
                                         {label}
                                     </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
                                 <li key={href}>
                                     <Link
                                         href={href}
-                                        className="text-sm text-slate-500 hover:text-brand-purple transition-colors duration-150"
+                                        className="text-sm text-slate-500 hover:text-brand-gold-dark transition-colors duration-150"
                                     >
                                         {label}
                                     </Link>
@@ -75,7 +75,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href={`mailto:${contactInfo.email}`}
-                                    className="text-sm text-slate-500 hover:text-brand-purple transition-colors duration-150 break-all"
+                                    className="text-sm text-slate-500 hover:text-brand-gold-dark transition-colors duration-150 break-all"
                                 >
                                     {contactInfo.email}
                                 </a>
@@ -83,7 +83,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href={`tel:${contactInfo.phone.replace(/\D/g, "")}`}
-                                    className="text-sm text-brand-purple hover:text-brand-blue transition-colors duration-150 font-medium"
+                                    className="text-sm text-brand-gold-dark hover:text-brand-blue transition-colors duration-150 font-medium"
                                 >
                                     {contactInfo.phone}
                                 </a>
@@ -95,7 +95,7 @@ export default function Footer() {
                 {/* ── Bottom bar ── */}
                 <div className="mt-10 pt-6 border-t border-slate-100 text-center text-xs text-slate-400">
                     © 2026 Axion Editora. Todos os{" "}
-                    <span className="text-brand-purple font-medium">direitos</span>{" "}
+                    <span className="text-brand-gold font-medium">direitos</span>{" "}
                     reservados.
                 </div>
             </div>

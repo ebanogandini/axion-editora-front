@@ -54,7 +54,7 @@ export default async function LivroPage({ params }: PageProps) {
                     <nav className="flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
                         <Link
                             href={isBook ? "/catalogo" : "/lancamentos"}
-                            className="inline-flex items-center gap-1.5 font-medium text-brand-blue hover:text-brand-orange transition-colors duration-200 group"
+                            className="inline-flex items-center gap-1.5 font-medium text-brand-gold-dark hover:text-sky-500 transition-colors duration-200 group"
                         >
                             <ArrowLeft
                                 size={15}
@@ -77,7 +77,7 @@ export default async function LivroPage({ params }: PageProps) {
                     <div className="lg:col-span-2">
                         {/* Sticky cover on desktop */}
                         <div className="lg:sticky lg:top-24">
-                            <div className="relative aspect-[2/3] w-full max-w-sm mx-auto lg:max-w-none rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-brand-purple/15 via-brand-blue/10 to-brand-orange/5 flex items-center justify-center">
+                            <div className="relative aspect-[2/3] w-full max-w-sm mx-auto lg:max-w-none rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-brand-gold/15 via-brand-blue/10 to-sky-200/5 flex items-center justify-center">
                                 {hasRealCover ? (
                                     <Image
                                         src={item.coverImage}
@@ -91,9 +91,9 @@ export default async function LivroPage({ params }: PageProps) {
                                     <>
                                         {/* Decorative rings */}
                                         <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                                            <div className="w-72 h-72 rounded-full border-[36px] border-brand-purple" />
+                                            <div className="w-72 h-72 rounded-full border-[36px] border-brand-gold" />
                                         </div>
-                                        <div className="absolute top-6 right-8 w-20 h-20 rounded-full bg-brand-orange/10 blur-2xl" />
+                                        <div className="absolute top-6 right-8 w-20 h-20 rounded-full bg-sky-100/10 blur-2xl" />
                                         <div className="absolute bottom-8 left-4 w-28 h-28 rounded-full bg-brand-blue/10 blur-2xl" />
 
                                         <div className="relative z-10 flex flex-col items-center gap-5 px-8 text-center">
@@ -108,7 +108,7 @@ export default async function LivroPage({ params }: PageProps) {
                                                 <p className="font-display text-lg font-bold text-brand-blue/80 leading-snug">
                                                     {item.title}
                                                 </p>
-                                                <p className="text-sm text-brand-purple/60 mt-1">
+                                                <p className="text-sm text-brand-gold-dark/60 mt-1">
                                                     {item.author}
                                                 </p>
                                             </div>
@@ -118,7 +118,7 @@ export default async function LivroPage({ params }: PageProps) {
 
                                 {/* Genre badge on cover — always visible */}
                                 <div className="absolute top-4 left-4 z-10">
-                                    <Badge className="bg-brand-purple text-white border-0 shadow-md text-xs font-semibold">
+                                    <Badge className="bg-brand-gold text-white border-0 shadow-md text-xs font-semibold">
                                         {genre}
                                     </Badge>
                                 </div>
@@ -129,7 +129,7 @@ export default async function LivroPage({ params }: PageProps) {
                                 <Button
                                     asChild
                                     size="lg"
-                                    className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-bold rounded-xl shadow-md hover:shadow-brand-orange/30 transition-all duration-200 group"
+                                    className="w-full py-3 min-h-[48px] text-base font-semibold flex items-center justify-center bg-brand-gold hover:bg-brand-gold-dark text-brand-dark hover:text-white rounded-full shadow-md hover:shadow-brand-gold/30 transition-all duration-200 group"
                                 >
                                     <Link href="/contato" className="flex items-center justify-center gap-2">
                                         <Sparkles size={16} />
@@ -144,7 +144,7 @@ export default async function LivroPage({ params }: PageProps) {
                                     asChild
                                     variant="outline"
                                     size="lg"
-                                    className="w-full border-brand-blue/30 text-brand-blue hover:bg-brand-blue hover:text-white transition-all rounded-xl"
+                                    className="w-full py-3 min-h-[48px] text-base font-semibold flex items-center justify-center border-brand-gold/40 text-brand-gold-dark hover:bg-brand-gold-dark hover:text-white transition-all rounded-full"
                                 >
                                     <Link href={isBook ? "/catalogo" : "/lancamentos"}>
                                         Ver mais títulos
@@ -159,11 +159,11 @@ export default async function LivroPage({ params }: PageProps) {
 
                         {/* Badges */}
                         <div className="flex flex-wrap gap-2">
-                            <Badge className="bg-brand-purple/10 text-brand-purple border-brand-purple/20 font-semibold text-xs">
+                            <Badge className="bg-brand-gold/10 text-brand-gold-dark border-brand-gold/20 font-semibold text-xs">
                                 {genre}
                             </Badge>
                             {ageRange && (
-                                <Badge className="bg-brand-orange/10 text-brand-orange border-brand-orange/20 font-semibold text-xs">
+                                <Badge className="bg-sky-100 text-sky-600 border-sky-200 font-semibold text-xs">
                                     {ageRange}
                                 </Badge>
                             )}
@@ -180,7 +180,7 @@ export default async function LivroPage({ params }: PageProps) {
                                 {item.title}
                             </h1>
                             <p className="flex items-center gap-2 text-xl text-gray-500">
-                                <User size={18} className="text-brand-purple/50" />
+                                <User size={18} className="text-brand-gold-dark/50" />
                                 por{" "}
                                 <span className="font-semibold text-gray-600">{item.author}</span>
                             </p>
@@ -197,7 +197,7 @@ export default async function LivroPage({ params }: PageProps) {
                                             <Star
                                                 key={i}
                                                 size={20}
-                                                className="text-brand-orange"
+                                                className="text-sky-400"
                                                 fill="currentColor"
                                             />
                                         );
@@ -208,7 +208,7 @@ export default async function LivroPage({ params }: PageProps) {
                                             <StarHalf
                                                 key={i}
                                                 size={20}
-                                                className="text-brand-orange"
+                                                className="text-sky-400"
                                                 fill="currentColor"
                                             />
                                         );
@@ -223,7 +223,7 @@ export default async function LivroPage({ params }: PageProps) {
                                     );
                                 })}
                                 {/* Numeric score */}
-                                <span className="font-display font-bold text-xl text-brand-blue ml-2">
+                                <span className="font-display font-bold text-xl text-brand-gold-dark ml-2">
                                     {item.rating.toFixed(1)}
                                 </span>
                                 {/* Divider + review count */}
@@ -235,7 +235,7 @@ export default async function LivroPage({ params }: PageProps) {
 
                         {/* Sinopse */}
                         <div>
-                            <h2 className="text-xs font-bold uppercase tracking-widest text-brand-orange mb-3">
+                            <h2 className="text-xs font-bold uppercase tracking-widest text-brand-gold-dark mb-3">
                                 Sinopse
                             </h2>
                             <p className="text-gray-700 leading-relaxed text-base">
@@ -252,7 +252,7 @@ export default async function LivroPage({ params }: PageProps) {
 
                         {/* ── Informações Técnicas ─ card redesign ── */}
                         <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
-                            <h2 className="font-display font-bold text-brand-blue text-xl mb-6">
+                            <h2 className="font-display font-bold text-brand-gold-dark text-xl mb-6">
                                 Informações Técnicas
                             </h2>
 
@@ -261,12 +261,12 @@ export default async function LivroPage({ params }: PageProps) {
 
                                 {/* Páginas */}
                                 <div className="flex items-center gap-4">
-                                    <div className="size-12 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center shrink-0">
+                                    <div className="size-12 rounded-full bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center shrink-0">
                                         <BookOpen size={20} strokeWidth={1.6} />
                                     </div>
                                     <div>
                                         <p className="text-sm text-slate-500">Páginas</p>
-                                        <p className="font-bold text-brand-blue text-lg leading-tight">
+                                        <p className="font-bold text-brand-gold-dark text-lg leading-tight">
                                             {item.pages ?? "N/D"}
                                         </p>
                                     </div>
@@ -274,12 +274,12 @@ export default async function LivroPage({ params }: PageProps) {
 
                                 {/* Faixa Etária */}
                                 <div className="flex items-center gap-4">
-                                    <div className="size-12 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center shrink-0">
+                                    <div className="size-12 rounded-full bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center shrink-0">
                                         <User size={20} strokeWidth={1.6} />
                                     </div>
                                     <div>
                                         <p className="text-sm text-slate-500">Faixa Etária</p>
-                                        <p className="font-bold text-brand-blue text-lg leading-tight">
+                                        <p className="font-bold text-brand-gold-dark text-lg leading-tight">
                                             {ageRange ?? "Todas as idades"}
                                         </p>
                                     </div>
@@ -287,12 +287,12 @@ export default async function LivroPage({ params }: PageProps) {
 
                                 {/* Lançamento */}
                                 <div className="flex items-center gap-4">
-                                    <div className="size-12 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0">
+                                    <div className="size-12 rounded-full bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center shrink-0">
                                         <Calendar size={20} strokeWidth={1.6} />
                                     </div>
                                     <div>
                                         <p className="text-sm text-slate-500">Lançamento</p>
-                                        <p className="font-bold text-brand-blue text-lg leading-tight">
+                                        <p className="font-bold text-brand-gold-dark text-lg leading-tight">
                                             {item.publicationYear ??
                                                 ("publishedAt" in item
                                                     ? new Date(item.publishedAt).getFullYear().toString()
@@ -305,7 +305,7 @@ export default async function LivroPage({ params }: PageProps) {
 
                             {/* ISBN — full width */}
                             <div className="mt-6 pt-5 border-t border-slate-100">
-                                <p className="text-sm text-brand-purple font-semibold mb-0.5">ISBN</p>
+                                <p className="text-sm text-brand-gold-dark font-semibold mb-0.5">ISBN</p>
                                 <p className="font-bold text-brand-blue text-base tracking-wide">
                                     {item.isbn ?? "N/D"}
                                 </p>
@@ -317,7 +317,7 @@ export default async function LivroPage({ params }: PageProps) {
                             <Button
                                 asChild
                                 size="lg"
-                                className="flex-1 bg-brand-orange hover:bg-brand-orange/90 text-white font-bold rounded-xl shadow-md group"
+                                className="flex-1 py-3 min-h-[48px] text-base font-semibold flex items-center justify-center bg-brand-gold hover:bg-brand-gold-dark text-brand-dark hover:text-white rounded-full shadow-md group"
                             >
                                 <Link href="/contato" className="flex items-center justify-center gap-2">
                                     <Sparkles size={15} />
@@ -332,7 +332,7 @@ export default async function LivroPage({ params }: PageProps) {
                                 asChild
                                 variant="outline"
                                 size="lg"
-                                className="flex-1 border-brand-blue/30 text-brand-blue hover:bg-brand-blue hover:text-white transition-all rounded-xl"
+                                className="flex-1 py-3 min-h-[48px] text-base font-semibold flex items-center justify-center border-brand-gold/40 text-brand-gold-dark hover:bg-brand-gold-dark hover:text-white transition-all rounded-full"
                             >
                                 <Link href={isBook ? "/catalogo" : "/lancamentos"}>
                                     Ver mais títulos
@@ -341,16 +341,16 @@ export default async function LivroPage({ params }: PageProps) {
                         </div>
 
                         {/* Sobre o Autor */}
-                        <div className="p-6 rounded-2xl bg-gradient-to-br from-brand-blue/5 to-brand-purple/5 border border-brand-blue/10">
-                            <h2 className="text-xs font-bold uppercase tracking-widest text-brand-orange mb-3">
+                        <div className="p-6 rounded-2xl bg-gradient-to-br from-brand-blue/5 to-brand-gold/5 border border-brand-blue/10">
+                            <h2 className="text-xs font-bold uppercase tracking-widest text-brand-gold-dark mb-3">
                                 Sobre o Autor
                             </h2>
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-white shadow-sm shrink-0">
-                                    <User size={20} className="text-brand-purple" />
+                                    <User size={20} className="text-brand-gold-dark" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-brand-blue text-sm mb-1">
+                                    <p className="font-bold text-brand-gold-dark text-sm mb-1">
                                         {item.author}
                                     </p>
                                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -370,7 +370,7 @@ export default async function LivroPage({ params }: PageProps) {
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex items-end justify-between mb-8">
                             <div>
-                                <p className="text-brand-orange text-xs font-bold uppercase tracking-widest mb-1">
+                                <p className="text-sky-500 text-xs font-bold uppercase tracking-widest mb-1">
                                     Descubra mais
                                 </p>
                                 <h2 className="font-display text-2xl font-bold text-brand-blue">
@@ -379,7 +379,7 @@ export default async function LivroPage({ params }: PageProps) {
                             </div>
                             <Link
                                 href={isBook ? "/catalogo" : "/lancamentos"}
-                                className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-brand-orange hover:text-brand-blue transition-colors group"
+                                className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-sky-500 hover:text-brand-gold-dark transition-colors group"
                             >
                                 Ver todos
                                 <ArrowRight
