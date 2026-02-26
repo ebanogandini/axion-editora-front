@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, Star, Sparkles, ArrowRight, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,9 +15,9 @@ const FEATURE_ICONS: Record<string, React.ReactNode> = {
 
 // Icon bg color per index
 const FEATURE_ICON_COLORS = [
-  "bg-brand-purple/10 text-brand-purple",
-  "bg-brand-purple/10 text-brand-purple",
-  "bg-brand-orange/10 text-brand-orange",
+  "bg-brand-gold/10 text-brand-gold-dark",
+  "bg-brand-gold/10 text-brand-gold-dark",
+  "bg-sky-100 text-sky-600",
 ];
 
 const highlights = books.filter((b) => b.isHighlight);
@@ -34,10 +35,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center">
 
             {/* ── Left: Content ───────────────────────────────── */}
-            <div className="flex flex-col items-center md:items-start gap-6 text-center md:text-left">
+            <div className="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-slate-500 text-sm font-medium mx-auto md:mx-0">
-                <Sparkles size={13} className="text-brand-purple" />
+                <Sparkles size={13} className="text-brand-gold" />
                 Novas histórias toda semana
               </div>
 
@@ -48,7 +49,7 @@ export default function HomePage() {
                 </span>
                 <span className="text-5xl sm:text-6xl lg:text-7xl block">
                   encantam{" "}
-                  <span className="text-brand-purple">gerações</span>
+                  <span className="text-brand-gold-dark">gerações</span>
                 </span>
               </h1>
 
@@ -57,11 +58,11 @@ export default function HomePage() {
                 Descubra o mundo mágico da leitura com os livros da{" "}
                 <strong className="text-brand-dark font-semibold">Axion Editora</strong>.
                 Histórias que inspiram, educam e{" "}
-                <strong className="text-brand-purple font-semibold">transformam vidas</strong>.
+                <strong className="text-brand-gold-dark font-semibold">transformam vidas</strong>.
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-wrap items-center gap-3 justify-center md:justify-start">
+              <div className="flex flex-wrap items-center gap-3 justify-center lg:justify-start">
                 <Button
                   asChild
                   size="lg"
@@ -76,107 +77,57 @@ export default function HomePage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-slate-300 text-slate-600 hover:border-brand-purple hover:text-brand-purple font-semibold px-7 rounded-xl"
+                  className="border-slate-300 text-slate-600 hover:border-brand-gold hover:text-brand-gold-dark font-semibold px-7 rounded-xl"
                 >
                   <Link href="/lancamentos">Ver Lançamentos</Link>
                 </Button>
               </div>
 
               {/* Stats row */}
-              <div className="flex items-center gap-4 sm:gap-8 pt-2 justify-center md:justify-start">
+              <div className="flex items-center gap-4 sm:gap-8 pt-2 justify-center lg:justify-start">
                 <div>
-                  <p className="font-display font-bold text-2xl text-brand-purple leading-none">
+                  <p className="font-display font-bold text-2xl text-brand-gold-dark leading-none">
                     100+
                   </p>
                   <p className="text-xs text-slate-400 mt-1">Títulos Publicados</p>
                 </div>
                 <div className="h-8 w-px bg-slate-200" />
                 <div>
-                  <p className="font-display font-bold text-2xl text-brand-purple leading-none">
+                  <p className="font-display font-bold text-2xl text-brand-gold-dark leading-none">
                     1M+
                   </p>
                   <p className="text-xs text-slate-400 mt-1">Leitores Felizes</p>
                 </div>
                 <div className="h-8 w-px bg-slate-200" />
                 <div className="flex items-center gap-1">
-                  <p className="font-display font-bold text-2xl text-brand-orange leading-none">
+                  <p className="font-display font-bold text-2xl text-sky-500 leading-none">
                     4.9
                   </p>
-                  <Star size={16} className="text-brand-orange fill-brand-orange mb-0.5" />
+                  <Star size={16} className="text-sky-400 fill-sky-400 mb-0.5" />
                   <p className="text-xs text-slate-400 mt-1 ml-0.5">Avaliação Média</p>
                 </div>
               </div>
             </div>
 
-            {/* ── Right: Abstract book cards composition ───────── */}
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="relative w-full max-w-md aspect-[4/3]">
-                {/* Soft lavender / peach gradient blob background */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#e8e4ff] via-[#f5eaff] to-[#ffe0d8] shadow-inner" />
+            {/* ── Right: Logo Jewel ──────────────────────────── */}
+            {/* The Outer Wrapper - Handles layout positioning and entrance animation */}
+            <div className="relative z-10 flex justify-center lg:justify-end animate-fade-in-up">
 
-                {/* Floating decorative stars */}
-                <svg
-                  className="absolute top-6 right-12 text-brand-purple opacity-60"
-                  width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
-                >
-                  <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
-                </svg>
-                <svg
-                  className="absolute bottom-10 right-6 text-brand-orange opacity-60"
-                  width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
-                >
-                  <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
-                </svg>
-                <svg
-                  className="absolute top-16 left-6 text-brand-purple opacity-40"
-                  width="10" height="10" viewBox="0 0 24 24" fill="currentColor"
-                >
-                  <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
-                </svg>
+              {/* Subtle Background Depth Element behind logo (Desktop only) */}
+              <div className="hidden lg:block absolute -inset-10 bg-gradient-radial from-brand-gold/20 to-transparent blur-3xl -z-10 animate-glow-pulse"></div>
 
-                {/* Floating book cover cards */}
-                {/* Card 1 — Deep Blue */}
-                <div
-                  className="absolute rounded-2xl shadow-lg"
-                  style={{
-                    width: "23%",
-                    aspectRatio: "2/3",
-                    backgroundColor: "#1E3A8A",
-                    left: "22%",
-                    top: "15%",
-                    transform: "rotate(-3deg)",
-                  }}
-                />
-                {/* Card 2 — Brand Purple (tallest, center) */}
-                <div
-                  className="absolute rounded-2xl shadow-xl"
-                  style={{
-                    width: "24%",
-                    aspectRatio: "2/3",
-                    backgroundColor: "#7C3AED",
-                    left: "40%",
-                    top: "10%",
-                    transform: "rotate(1deg)",
-                    zIndex: 2,
-                  }}
-                />
-                {/* Card 3 — Brand Orange */}
-                <div
-                  className="absolute rounded-2xl shadow-lg"
-                  style={{
-                    width: "23%",
-                    aspectRatio: "2/3",
-                    backgroundColor: "#F97316",
-                    left: "58%",
-                    top: "18%",
-                    transform: "rotate(4deg)",
-                  }}
-                />
+              {/* The Floater Wrapper - Handles the continuous levitation */}
+              <div className="animate-floating relative">
 
-                {/* Small heart accent */}
-                <div className="absolute bottom-14 left-[18%] p-1.5 rounded-full bg-brand-purple/20 text-brand-purple">
-                  <Heart size={12} fill="currentColor" />
-                </div>
+                {/* The Magical Logo Image */}
+                <Image
+                  src="/logo.jpeg"
+                  alt="Axion Editora Logo"
+                  width={600}
+                  height={600}
+                  priority
+                  className="w-56 sm:w-72 md:w-[450px] lg:w-[550px] h-auto mix-blend-multiply drop-shadow-[0_10px_30px_rgba(212,175,55,0.5)] hover:drop-shadow-[0_15px_40px_rgba(212,175,55,0.7)] transition-all duration-500"
+                />
               </div>
             </div>
           </div>
@@ -195,13 +146,13 @@ export default function HomePage() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-brand-dark leading-tight">
                 Destaques
               </h2>
-              <p className="text-brand-purple/70 text-sm mt-1">
+              <p className="text-brand-gold-dark/70 text-sm mt-1">
                 Os livros mais amados pelos nossos leitores
               </p>
             </div>
             <Link
               href="/catalogo"
-              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 hover:text-brand-purple transition-colors group"
+              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 hover:text-brand-gold-dark transition-colors group"
             >
               Ver todos
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
@@ -256,13 +207,13 @@ export default function HomePage() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-brand-dark leading-tight">
                 Novidades
               </h2>
-              <p className="text-brand-purple/70 text-sm mt-1">
+              <p className="text-brand-gold-dark/70 text-sm mt-1">
                 Chegando às livrarias em breve
               </p>
             </div>
             <Link
               href="/lancamentos"
-              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 hover:text-brand-purple transition-colors group"
+              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 hover:text-brand-gold-dark transition-colors group"
             >
               Ver todos
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />

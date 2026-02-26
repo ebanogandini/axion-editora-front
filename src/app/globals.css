@@ -16,8 +16,12 @@
   /* ── Axion Editora Brand Palette ── */
   --color-brand-blue: #1E3A8A;
   /* Deep Blue — trust, headings, branding */
-  --color-brand-purple: #6D28D9;
-  /* Magical Purple — imagination, badges */
+  --color-brand-gold-light: #FDF5D3;
+  /* Champagne — subtle backgrounds, tinted sections */
+  --color-brand-gold: #D4AF37;
+  /* Classic Metallic Gold — buttons, borders, accents */
+  --color-brand-gold-dark: #996515;
+  /* Deep Bronze — high-contrast text on light backgrounds */
   --color-brand-orange: #F97316;
   /* Energetic Orange — CTA, hover states */
   --color-brand-bg: #FAFAFA;
@@ -60,6 +64,10 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-floating: floating 4s ease-in-out infinite;
+  --animate-glow-pulse: subtle-pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --bg-gradient-radial: radial-gradient(var(--tw-gradient-stops));
 }
 
 :root {
@@ -147,4 +155,21 @@
   h4 {
     font-family: var(--font-display);
   }
+}
+
+/* ── Custom animation: fade-in-up (logo hero entrance) ────────────────────── */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
 }
