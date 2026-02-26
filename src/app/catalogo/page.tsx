@@ -38,7 +38,7 @@ export default function CatalogoPage() {
     return (
         <div className="flex flex-col">
             {/* ── Page Header ───────────────────────────────────────────── */}
-            <section className="bg-gradient-to-br from-brand-blue to-brand-purple py-14">
+            <section className="bg-gradient-to-br from-brand-blue to-brand-gold-dark py-14">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm font-medium mb-5">
                         <BookOpen size={14} />
@@ -71,8 +71,8 @@ export default function CatalogoPage() {
                                 <button
                                     onClick={() => setActiveCategory(ALL)}
                                     className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 ${activeCategory === ALL
-                                            ? "bg-brand-blue text-white border-brand-blue shadow-sm"
-                                            : "bg-white text-slate-600 border-slate-200 hover:border-brand-blue hover:text-brand-blue"
+                                        ? "bg-brand-gold text-brand-dark border-brand-gold shadow-sm"
+                                        : "bg-white text-slate-600 border-slate-200 hover:border-brand-gold hover:text-brand-gold-dark"
                                         }`}
                                 >
                                     Todos
@@ -82,8 +82,8 @@ export default function CatalogoPage() {
                                         key={cat.id}
                                         onClick={() => setActiveCategory(cat.name)}
                                         className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 ${activeCategory === cat.name
-                                                ? "bg-brand-purple text-white border-brand-purple shadow-sm"
-                                                : "bg-white text-slate-600 border-slate-200 hover:border-brand-purple hover:text-brand-purple"
+                                            ? "bg-brand-gold text-brand-dark border-brand-gold shadow-sm"
+                                            : "bg-white text-slate-600 border-slate-200 hover:border-brand-gold hover:text-brand-gold-dark"
                                             }`}
                                     >
                                         {cat.name}
@@ -100,8 +100,8 @@ export default function CatalogoPage() {
                                 <button
                                     onClick={() => setActiveAge(ALL)}
                                     className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 ${activeAge === ALL
-                                            ? "bg-brand-blue text-white border-brand-blue shadow-sm"
-                                            : "bg-white text-slate-600 border-slate-200 hover:border-brand-blue hover:text-brand-blue"
+                                        ? "bg-brand-gold text-brand-dark border-brand-gold shadow-sm"
+                                        : "bg-white text-slate-600 border-slate-200 hover:border-brand-gold hover:text-brand-gold-dark"
                                         }`}
                                 >
                                     Todas
@@ -111,8 +111,8 @@ export default function CatalogoPage() {
                                         key={age.id}
                                         onClick={() => setActiveAge(age.label)}
                                         className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 ${activeAge === age.label
-                                                ? "bg-brand-orange text-white border-brand-orange shadow-sm"
-                                                : "bg-white text-slate-600 border-slate-200 hover:border-brand-orange hover:text-brand-orange"
+                                            ? "bg-brand-gold text-brand-dark border-brand-gold shadow-sm"
+                                            : "bg-white text-slate-600 border-slate-200 hover:border-brand-gold hover:text-brand-gold-dark"
                                             }`}
                                     >
                                         {age.label}
@@ -125,7 +125,7 @@ export default function CatalogoPage() {
                         {hasActiveFilter && (
                             <button
                                 onClick={clearFilters}
-                                className="text-xs font-semibold text-brand-orange hover:text-brand-blue transition-colors duration-200 shrink-0 underline underline-offset-2"
+                                className="text-xs font-semibold text-sky-500 hover:text-brand-gold-dark transition-colors duration-200 shrink-0 underline underline-offset-2"
                             >
                                 Limpar filtros
                             </button>
@@ -167,8 +167,8 @@ export default function CatalogoPage() {
                     ) : (
                         /* Empty State */
                         <div className="flex flex-col items-center justify-center py-24 text-center">
-                            <div className="p-6 rounded-full bg-brand-purple/10 mb-6">
-                                <SearchX size={40} className="text-brand-purple/50" />
+                            <div className="p-6 rounded-full bg-brand-gold/10 mb-6">
+                                <SearchX size={40} className="text-brand-gold/50" />
                             </div>
                             <h3 className="font-display text-xl font-bold text-brand-blue mb-2">
                                 Nenhum livro encontrado
@@ -179,7 +179,7 @@ export default function CatalogoPage() {
                             </p>
                             <button
                                 onClick={clearFilters}
-                                className="mt-6 px-6 py-2.5 rounded-xl bg-brand-orange text-white text-sm font-semibold hover:bg-brand-orange/90 transition-colors duration-200"
+                                className="mt-6 px-6 py-2.5 rounded-xl bg-sky-500 text-white text-sm font-semibold hover:bg-sky-600 transition-colors duration-200"
                             >
                                 Mostrar todos os livros
                             </button>
