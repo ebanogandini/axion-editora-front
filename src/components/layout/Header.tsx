@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search } from "lucide-react";
@@ -21,13 +22,19 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
 
-                    {/* Logo — two-tone matching prototype */}
+                    {/* Official Image Logo */}
                     <Link
                         href="/"
-                        className="font-display text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+                        className="flex items-center hover:opacity-80 transition-opacity duration-300"
                     >
-                        <span className="text-brand-blue">Axion</span>
-                        <span className="text-brand-gold-dark"> Editora</span>
+                        <Image
+                            src="/logo.jpeg"
+                            alt="Logo Axion Editora"
+                            width={250}
+                            height={80}
+                            priority
+                            className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                        />
                     </Link>
 
                     {/* Desktop Nav */}
